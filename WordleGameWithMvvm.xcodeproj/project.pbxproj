@@ -13,6 +13,7 @@
 		080267FB28A7D968001FB9FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080267F928A7D968001FB9FF /* Main.storyboard */; };
 		080267FD28A7D96A001FB9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080267FC28A7D96A001FB9FF /* Assets.xcassets */; };
 		0802680028A7D96A001FB9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080267FE28A7D96A001FB9FF /* LaunchScreen.storyboard */; };
+		0802680A28A7FDE1001FB9FF /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0802680928A7FDE1001FB9FF /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		080267FC28A7D96A001FB9FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		080267FF28A7D96A001FB9FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0802680128A7D96A001FB9FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0802680928A7FDE1001FB9FF /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				080267FC28A7D96A001FB9FF /* Assets.xcassets */,
 				080267FE28A7D96A001FB9FF /* LaunchScreen.storyboard */,
 				0802680128A7D96A001FB9FF /* Info.plist */,
+				0802680928A7FDE1001FB9FF /* GameViewModel.swift */,
 			);
 			path = WordleGameWithMvvm;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0802680A28A7FDE1001FB9FF /* GameViewModel.swift in Sources */,
 				080267F828A7D968001FB9FF /* ViewController.swift in Sources */,
 				080267F428A7D968001FB9FF /* AppDelegate.swift in Sources */,
 				080267F628A7D968001FB9FF /* SceneDelegate.swift in Sources */,
