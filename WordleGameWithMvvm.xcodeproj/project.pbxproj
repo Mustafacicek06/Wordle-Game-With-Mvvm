@@ -94,16 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				0811E11E28A9B150004EB0E7 /* viewModel */,
-				0811E11D28A9B147004EB0E7 /* Model */,
 			);
 			path = Features;
-			sourceTree = "<group>";
-		};
-		0811E11D28A9B147004EB0E7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		0811E11E28A9B150004EB0E7 /* viewModel */ = {
