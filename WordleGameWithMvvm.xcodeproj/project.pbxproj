@@ -14,6 +14,9 @@
 		080267FD28A7D96A001FB9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080267FC28A7D96A001FB9FF /* Assets.xcassets */; };
 		0802680028A7D96A001FB9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080267FE28A7D96A001FB9FF /* LaunchScreen.storyboard */; };
 		0802680A28A7FDE1001FB9FF /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0802680928A7FDE1001FB9FF /* GameViewModel.swift */; };
+		0811E11A28A9A2BE004EB0E7 /* WordDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0811E11928A9A2BE004EB0E7 /* WordDatabase.swift */; };
+		08D7DF8828A9A2190055D356 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D7DF8728A9A2190055D356 /* Word.swift */; };
+		872E39BED0552EBC17F503F0 /* Pods_WordleGameWithMvvm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44755E0A96EEAD538D0A20C8 /* Pods_WordleGameWithMvvm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		080267FF28A7D96A001FB9FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0802680128A7D96A001FB9FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0802680928A7FDE1001FB9FF /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		0811E11928A9A2BE004EB0E7 /* WordDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDatabase.swift; sourceTree = "<group>"; };
+		08D7DF8728A9A2190055D356 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		21F3223FAC774E9271723145 /* Pods-WordleGameWithMvvm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleGameWithMvvm.release.xcconfig"; path = "Target Support Files/Pods-WordleGameWithMvvm/Pods-WordleGameWithMvvm.release.xcconfig"; sourceTree = "<group>"; };
+		44755E0A96EEAD538D0A20C8 /* Pods_WordleGameWithMvvm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordleGameWithMvvm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91EC13878A5E89664F0AED48 /* Pods-WordleGameWithMvvm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleGameWithMvvm.debug.xcconfig"; path = "Target Support Files/Pods-WordleGameWithMvvm/Pods-WordleGameWithMvvm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				872E39BED0552EBC17F503F0 /* Pods_WordleGameWithMvvm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,8 @@
 			children = (
 				080267F228A7D968001FB9FF /* WordleGameWithMvvm */,
 				080267F128A7D968001FB9FF /* Products */,
+				6033BF5E6F36B6E1F3D6E516 /* Pods */,
+				98A1381A2D8DD10156673304 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +69,75 @@
 		080267F228A7D968001FB9FF /* WordleGameWithMvvm */ = {
 			isa = PBXGroup;
 			children = (
-				080267F328A7D968001FB9FF /* AppDelegate.swift */,
-				080267F528A7D968001FB9FF /* SceneDelegate.swift */,
-				080267F728A7D968001FB9FF /* ViewController.swift */,
-				080267F928A7D968001FB9FF /* Main.storyboard */,
+				0811E11F28A9B15E004EB0E7 /* Service */,
+				0811E11C28A9B137004EB0E7 /* Features */,
+				0811E11B28A9B126004EB0E7 /* Core */,
 				080267FC28A7D96A001FB9FF /* Assets.xcassets */,
 				080267FE28A7D96A001FB9FF /* LaunchScreen.storyboard */,
 				0802680128A7D96A001FB9FF /* Info.plist */,
-				0802680928A7FDE1001FB9FF /* GameViewModel.swift */,
 			);
 			path = WordleGameWithMvvm;
+			sourceTree = "<group>";
+		};
+		0811E11B28A9B126004EB0E7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				080267F928A7D968001FB9FF /* Main.storyboard */,
+				080267F728A7D968001FB9FF /* ViewController.swift */,
+				080267F528A7D968001FB9FF /* SceneDelegate.swift */,
+				080267F328A7D968001FB9FF /* AppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		0811E11C28A9B137004EB0E7 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				0811E11E28A9B150004EB0E7 /* viewModel */,
+				0811E11D28A9B147004EB0E7 /* Model */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		0811E11D28A9B147004EB0E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0811E11E28A9B150004EB0E7 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0802680928A7FDE1001FB9FF /* GameViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		0811E11F28A9B15E004EB0E7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				08D7DF8728A9A2190055D356 /* Word.swift */,
+				0811E11928A9A2BE004EB0E7 /* WordDatabase.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6033BF5E6F36B6E1F3D6E516 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91EC13878A5E89664F0AED48 /* Pods-WordleGameWithMvvm.debug.xcconfig */,
+				21F3223FAC774E9271723145 /* Pods-WordleGameWithMvvm.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		98A1381A2D8DD10156673304 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44755E0A96EEAD538D0A20C8 /* Pods_WordleGameWithMvvm.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0802680428A7D96A001FB9FF /* Build configuration list for PBXNativeTarget "WordleGameWithMvvm" */;
 			buildPhases = (
+				04A3D70B94F58223D24DB812 /* [CP] Check Pods Manifest.lock */,
 				080267EC28A7D968001FB9FF /* Sources */,
 				080267ED28A7D968001FB9FF /* Frameworks */,
 				080267EE28A7D968001FB9FF /* Resources */,
+				10C501C0254B6921F5E49ED3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +208,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04A3D70B94F58223D24DB812 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WordleGameWithMvvm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		10C501C0254B6921F5E49ED3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WordleGameWithMvvm/Pods-WordleGameWithMvvm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WordleGameWithMvvm/Pods-WordleGameWithMvvm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WordleGameWithMvvm/Pods-WordleGameWithMvvm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		080267EC28A7D968001FB9FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -143,6 +257,8 @@
 			files = (
 				0802680A28A7FDE1001FB9FF /* GameViewModel.swift in Sources */,
 				080267F828A7D968001FB9FF /* ViewController.swift in Sources */,
+				0811E11A28A9A2BE004EB0E7 /* WordDatabase.swift in Sources */,
+				08D7DF8828A9A2190055D356 /* Word.swift in Sources */,
 				080267F428A7D968001FB9FF /* AppDelegate.swift in Sources */,
 				080267F628A7D968001FB9FF /* SceneDelegate.swift in Sources */,
 			);
@@ -227,6 +343,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -280,12 +397,14 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		0802680528A7D96A001FB9FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91EC13878A5E89664F0AED48 /* Pods-WordleGameWithMvvm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +433,7 @@
 		};
 		0802680628A7D96A001FB9FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21F3223FAC774E9271723145 /* Pods-WordleGameWithMvvm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
