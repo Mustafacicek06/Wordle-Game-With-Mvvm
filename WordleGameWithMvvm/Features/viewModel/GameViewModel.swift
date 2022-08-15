@@ -47,6 +47,7 @@ final class GameViewModel {
     var onCharacterSucces: ((String) -> Void)? = nil
     var onInputComplete: ((InputComplete) -> Void)? = nil
     var onError: ((WordleError) -> Void)? = nil
+    var onGameOver: ((Bool) -> Void)? = nil
     
    
     private var targetWord : String? {
@@ -138,8 +139,14 @@ final class GameViewModel {
         
         }
         onInputComplete?(InputComplete(word: input, matchedIndexes: matchedIndexes, nearlyMatchedIndexes: nearlyMatchedIndexes))
-        print("eslesen index \(matchedIndexes)")
-        print("eslesmeye yakın \(nearlyMatchedIndexes)")
+        let isSuccess = inputWords.contains(targetWord)
+        let isComplete = inputWords.count == 6
+        if isSuccess {
+            onGameOver?(true)
+        } else {
+            onGameOver?(false)
+        }
+      
         
     }
 }
