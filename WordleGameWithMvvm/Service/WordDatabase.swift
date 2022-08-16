@@ -1,5 +1,5 @@
 //
-//  WordDatabase.swift
+//  GameDatabase.swift
 //  WordleGameWithMvvm
 //
 //  Created by Mustafa Çiçek on 15.08.2022.
@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-final class WordDatabase {
+final class GameDatabase {
     
     var documentsFileURL: URL? {
         if let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
@@ -34,6 +34,36 @@ final class WordDatabase {
         }
     }
     
+    func initializeGame() -> Game {
+        var game = Game()
+        
+        // bu obje artık realmDb'ye ait bir obje degisiklikleri closure icinde
+        // yapabilirsin aksi halde algılamaz
+       try? realm?.write {
+            realm?.add(game)
+        }
+        return game
+    }
+    
+    func addWordToGame(game: Game, word: String){
+        var currentWords: List<String> = List<String>()
+        
+        game.words.forEach{
+            currentWords.append($0)
+        }
+        currentWords.append(word)
+        
+        try? realm?.write {
+            game.words = currentWords
+         }
+        
+    }
+    func updateGameStatus(game: Game, isSuccess: Bool){
+        try? realm?.write{
+            game.isSuccess = isSuccess
+            
+        }
+    }
     func retrieveAndConsumeRandomWord() -> String {
         let words = realm?
             .objects(Word.self)

@@ -63,13 +63,15 @@ final class GameViewModel {
     
     private var inputCharacters: [String] = []
     
-    private let database = WordDatabase()
+    private let database = GameDatabase()
+    private var currentGame: Game?
     
     // MARK: Public methods
     
     func reloadTargetWord(){
         
         targetWord = database.retrieveAndConsumeRandomWord()
+        currentGame = database.initializeGame()
     
     }
     
@@ -138,13 +140,24 @@ final class GameViewModel {
             }
         
         }
+        if let game = currentGame {
+            database.addWordToGame(game: game,word: input)
+
+        }
+        
         onInputComplete?(InputComplete(word: input, matchedIndexes: matchedIndexes, nearlyMatchedIndexes: nearlyMatchedIndexes))
         let isSuccess = inputWords.contains(targetWord)
         let isComplete = inputWords.count == 6
         if isSuccess {
             onGameOver?(true)
+            if let game = currentGame {
+                database.updateGameStatus(game: game,isSuccess: true)
+            }
         } else {
             onGameOver?(false)
+            if let game = currentGame {
+                database.updateGameStatus(game: game,isSuccess: false)
+            }
         }
       
         

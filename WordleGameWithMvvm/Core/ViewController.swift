@@ -43,20 +43,23 @@ class ViewController: UIViewController {
         }
         model.onError = { [weak self] error in
             guard let self = self else { return }
-            
+            let message: String
             switch error {
             case .notValidCharacter:
-                break
+                message = "Not valid character."
             case .notInDictionary:
-                break
+                message = "Not in dictionary."
             case .inputAlreadyExists:
-                break
-                
+                message = "Input already exists."
             }
+            
+            self.customAlert(title: "Error", message: message)
+            
             
         }
         model.onGameOver = { [weak self] isSuccess in
             
+            self?.customAlert(title: "Game Finished!", message: isSuccess ? "Succesfully :)": "Fail :( ")
         }
     }
     
