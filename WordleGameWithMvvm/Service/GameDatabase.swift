@@ -33,7 +33,10 @@ final class GameDatabase {
             }
         }
     }
-    
+    func retrieveGames() -> [Game]{
+       return realm?
+            .objects(Game.self).compactMap { $0 } ?? []
+    }
     func initializeGame() -> Game {
         var game = Game()
         
@@ -47,14 +50,10 @@ final class GameDatabase {
     
     func addWordToGame(game: Game, word: String){
         var currentWords: List<String> = List<String>()
-        
-        game.words.forEach{
-            currentWords.append($0)
-        }
-        currentWords.append(word)
+       
         
         try? realm?.write {
-            game.words = currentWords
+            game.words.append(word)
          }
         
     }

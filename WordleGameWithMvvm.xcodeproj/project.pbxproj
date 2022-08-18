@@ -9,15 +9,16 @@
 /* Begin PBXBuildFile section */
 		080267F428A7D968001FB9FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080267F328A7D968001FB9FF /* AppDelegate.swift */; };
 		080267F628A7D968001FB9FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080267F528A7D968001FB9FF /* SceneDelegate.swift */; };
-		080267F828A7D968001FB9FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080267F728A7D968001FB9FF /* ViewController.swift */; };
+		080267F828A7D968001FB9FF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080267F728A7D968001FB9FF /* GameViewController.swift */; };
 		080267FB28A7D968001FB9FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080267F928A7D968001FB9FF /* Main.storyboard */; };
 		080267FD28A7D96A001FB9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080267FC28A7D96A001FB9FF /* Assets.xcassets */; };
 		0802680028A7D96A001FB9FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 080267FE28A7D96A001FB9FF /* LaunchScreen.storyboard */; };
 		0802680A28A7FDE1001FB9FF /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0802680928A7FDE1001FB9FF /* GameViewModel.swift */; };
-		0811E11A28A9A2BE004EB0E7 /* WordDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0811E11928A9A2BE004EB0E7 /* WordDatabase.swift */; };
+		0811E11A28A9A2BE004EB0E7 /* GameDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0811E11928A9A2BE004EB0E7 /* GameDatabase.swift */; };
 		08D7DF8828A9A2190055D356 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D7DF8728A9A2190055D356 /* Word.swift */; };
 		08E037A528ABE92F00CBF187 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E037A428ABE92F00CBF187 /* AlertExtension.swift */; };
 		08E037A728ABEA3C00CBF187 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E037A628ABEA3C00CBF187 /* Game.swift */; };
+		08E037AA28ABF50900CBF187 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E037A928ABF50900CBF187 /* ListViewController.swift */; };
 		872E39BED0552EBC17F503F0 /* Pods_WordleGameWithMvvm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44755E0A96EEAD538D0A20C8 /* Pods_WordleGameWithMvvm.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,16 +26,17 @@
 		080267F028A7D968001FB9FF /* WordleGameWithMvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordleGameWithMvvm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		080267F328A7D968001FB9FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		080267F528A7D968001FB9FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		080267F728A7D968001FB9FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		080267F728A7D968001FB9FF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		080267FA28A7D968001FB9FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		080267FC28A7D96A001FB9FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		080267FF28A7D96A001FB9FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0802680128A7D96A001FB9FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0802680928A7FDE1001FB9FF /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
-		0811E11928A9A2BE004EB0E7 /* WordDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDatabase.swift; sourceTree = "<group>"; };
+		0811E11928A9A2BE004EB0E7 /* GameDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDatabase.swift; sourceTree = "<group>"; };
 		08D7DF8728A9A2190055D356 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		08E037A428ABE92F00CBF187 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		08E037A628ABEA3C00CBF187 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		08E037A928ABF50900CBF187 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		21F3223FAC774E9271723145 /* Pods-WordleGameWithMvvm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleGameWithMvvm.release.xcconfig"; path = "Target Support Files/Pods-WordleGameWithMvvm/Pods-WordleGameWithMvvm.release.xcconfig"; sourceTree = "<group>"; };
 		44755E0A96EEAD538D0A20C8 /* Pods_WordleGameWithMvvm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordleGameWithMvvm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91EC13878A5E89664F0AED48 /* Pods-WordleGameWithMvvm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordleGameWithMvvm.debug.xcconfig"; path = "Target Support Files/Pods-WordleGameWithMvvm/Pods-WordleGameWithMvvm.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,9 +90,9 @@
 			children = (
 				08E037A128ABE7D400CBF187 /* Extensions */,
 				080267F928A7D968001FB9FF /* Main.storyboard */,
-				080267F728A7D968001FB9FF /* ViewController.swift */,
 				080267F528A7D968001FB9FF /* SceneDelegate.swift */,
 				080267F328A7D968001FB9FF /* AppDelegate.swift */,
+				08E037A928ABF50900CBF187 /* ListViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -98,25 +100,25 @@
 		0811E11C28A9B137004EB0E7 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				0811E11E28A9B150004EB0E7 /* viewModel */,
+				0811E11E28A9B150004EB0E7 /* Game */,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		0811E11E28A9B150004EB0E7 /* viewModel */ = {
+		0811E11E28A9B150004EB0E7 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				080267F728A7D968001FB9FF /* GameViewController.swift */,
 				0802680928A7FDE1001FB9FF /* GameViewModel.swift */,
 			);
-			path = viewModel;
+			path = Game;
 			sourceTree = "<group>";
 		};
 		0811E11F28A9B15E004EB0E7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				08D7DF8728A9A2190055D356 /* Word.swift */,
-				0811E11928A9A2BE004EB0E7 /* WordDatabase.swift */,
-				08E037A628ABEA3C00CBF187 /* Game.swift */,
+				08E037A828ABF46B00CBF187 /* Models */,
+				0811E11928A9A2BE004EB0E7 /* GameDatabase.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -127,6 +129,15 @@
 				08E037A428ABE92F00CBF187 /* AlertExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		08E037A828ABF46B00CBF187 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				08D7DF8728A9A2190055D356 /* Word.swift */,
+				08E037A628ABEA3C00CBF187 /* Game.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		6033BF5E6F36B6E1F3D6E516 /* Pods */ = {
@@ -262,10 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0802680A28A7FDE1001FB9FF /* GameViewModel.swift in Sources */,
-				080267F828A7D968001FB9FF /* ViewController.swift in Sources */,
-				0811E11A28A9A2BE004EB0E7 /* WordDatabase.swift in Sources */,
+				080267F828A7D968001FB9FF /* GameViewController.swift in Sources */,
+				0811E11A28A9A2BE004EB0E7 /* GameDatabase.swift in Sources */,
 				08D7DF8828A9A2190055D356 /* Word.swift in Sources */,
 				080267F428A7D968001FB9FF /* AppDelegate.swift in Sources */,
+				08E037AA28ABF50900CBF187 /* ListViewController.swift in Sources */,
 				080267F628A7D968001FB9FF /* SceneDelegate.swift in Sources */,
 				08E037A528ABE92F00CBF187 /* AlertExtension.swift in Sources */,
 				08E037A728ABEA3C00CBF187 /* Game.swift in Sources */,

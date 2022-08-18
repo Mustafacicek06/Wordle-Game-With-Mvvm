@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
     private let model = GameViewModel()
     
     @IBOutlet private weak var baseStackView: UIStackView!
